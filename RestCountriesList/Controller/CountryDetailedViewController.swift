@@ -39,7 +39,6 @@ class CountryDetailedViewController: UIViewController {
         // LABEL VIEWS
         let labels = setupLabelViews()
         
-        
         // COAT OF ARMS VIEW
         let coatOfArms = setupImageView(height: 150, width: 200, imageString: country?.coatOfArms?.png)
         
