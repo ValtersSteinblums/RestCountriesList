@@ -29,7 +29,6 @@ class CountryTableViewController: UITableViewController {
         view.backgroundColor = .secondarySystemBackground
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         setupNavigationBar()
-        // gestureRecogniser
         let longPressRecogniser = UILongPressGestureRecognizer(target: self, action: #selector(longPress(sender:)))
         self.view.addGestureRecognizer(longPressRecogniser)
         

@@ -13,7 +13,11 @@ class CountryDetailedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setView()
+    }
+    
+    // MARK: - SETUP WHOLE VIEW
+    func setView() {
         // TITLE LABEL VIEW, SEPARATE FROM STACK
         let titleLabel = UILabel()
         
@@ -33,60 +37,23 @@ class CountryDetailedViewController: UIViewController {
         titleLabel.textAlignment = .center
         
         // LABEL VIEWS
-        let officalName = labelView(labelText: "Official name: \(country?.name?.official ?? "No info")")
-        
-        let independentCountry = labelView(labelText: "Country is independent: " + (country?.independent?.description ?? "No info"))
-        
-        let countryUnMember = labelView(labelText: "Country is a member of the UN: " + (country?.unMember?.description ?? "No info"))
-        
-        let countryCapital = labelView(labelText: "Capital city: " + (country?.capital?.first ?? "No info"))
-        
-        let countryRegion = labelView(labelText: "Region: " + (country?.region?.rawValue ?? "No info"))
-        
-        let countryArea = labelView(labelText: "Country area: \(country?.area ?? 0)")
-        
-        let countryPopulation = labelView(labelText: "Population: \(country?.population ?? 0)")
+        let labels = setupLabelViews()
         
         // COAT OF ARMS VIEW
-        let coatOfArms = UIImageView()
-        coatOfArms.sd_setImage(with: URL(string: country?.coatOfArms?.png ?? ""), placeholderImage: UIImage(named: "No_flag.svg"))
-        coatOfArms.translatesAutoresizingMaskIntoConstraints = false
-        coatOfArms.heightAnchor.constraint(lessThanOrEqualToConstant: 150).isActive = true
-        coatOfArms.widthAnchor.constraint(lessThanOrEqualToConstant: 200).isActive = true
+        let coatOfArms = setupImageView(height: 150, width: 200, imageString: country?.coatOfArms?.png)
         
         // FLAG VIEW
-        let countryFlag = UIImageView()
-        countryFlag.sd_setImage(with: URL(string: country?.flags?.png ?? ""), placeholderImage: UIImage(named: "No_flag.svg"))
-        countryFlag.translatesAutoresizingMaskIntoConstraints = false
-        countryFlag.heightAnchor.constraint(lessThanOrEqualToConstant: 150).isActive = true
-        countryFlag.widthAnchor.constraint(lessThanOrEqualToConstant: 300).isActive = true
+        let countryFlag = setupImageView(height: 150, width: 300, imageString: country?.flags?.png)
         
         // FLAG & COAT OF ARMS STACK VIEW
-        let coatFlagStackView = UIStackView()
-        coatFlagStackView.axis = .vertical
-        coatFlagStackView.distribution = .fillEqually
-        coatFlagStackView.alignment = .center
-        coatFlagStackView.spacing = 5.0
-        coatFlagStackView.translatesAutoresizingMaskIntoConstraints = false
+        let coatFlagStackView = setupStackView()
         
         coatFlagStackView.addArrangedSubview(coatOfArms)
         coatFlagStackView.addArrangedSubview(countryFlag)
         
         //INFO STACK VIEW (INFO LABELS)
-        let infoStackView = UIStackView()
-        infoStackView.axis = .vertical
-        infoStackView.distribution = .fillEqually
-        infoStackView.alignment = .center
-        infoStackView.spacing = 5.0
-        infoStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        infoStackView.addArrangedSubview(officalName)
-        infoStackView.addArrangedSubview(independentCountry)
-        infoStackView.addArrangedSubview(countryUnMember)
-        infoStackView.addArrangedSubview(countryCapital)
-        infoStackView.addArrangedSubview(countryRegion)
-        infoStackView.addArrangedSubview(countryArea)
-        infoStackView.addArrangedSubview(countryPopulation)
+        let infoStackView = setupStackView()
+        addLabelsToStack(arr: labels, stack: infoStackView)
         
         
         
@@ -119,6 +86,7 @@ class CountryDetailedViewController: UIViewController {
         coatFlagStackView.rightAnchor.constraint(equalTo: allStackView.rightAnchor, constant: -10).isActive = true
     }
     
+    // MARK: - LABEL VIEW FUNCTIONS
     func labelView(labelText: String) -> UILabel {
         let labelName = UILabel()
         labelName.numberOfLines = 0
@@ -132,4 +100,48 @@ class CountryDetailedViewController: UIViewController {
         return labelName
     }
     
+    func setupLabelViews() -> [UILabel] {
+        var labelArray = [UILabel]()
+        
+        labelArray.append(labelView(labelText: "Official name: \(country?.name?.official ?? "No info")"))
+        labelArray.append(labelView(labelText: "Country is independent: " + (country?.independent?.description ?? "No info")))
+        labelArray.append(labelView(labelText: "Country is a member of the UN: " + (country?.unMember?.description ?? "No info")))
+        labelArray.append(labelView(labelText: "Capital city: " + (country?.capital?.first ?? "No info")))
+        labelArray.append(labelView(labelText: "Region: " + (country?.region?.rawValue ?? "No info")))
+        labelArray.append(labelView(labelText: "Country area: \(country?.area ?? 0)"))
+        labelArray.append(labelView(labelText: "Population: \(country?.population ?? 0)"))
+                          
+        return labelArray
+    }
+    
+    // MARK: - STACK VIEW FUNCTIONS
+    func setupStackView() -> UIStackView {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .center
+        stackView.spacing = 5.0
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+            
+        return stackView
+    }
+    
+    func addLabelsToStack(arr: [UILabel], stack: UIStackView) {
+        for label in arr {
+            stack.addArrangedSubview(label)
+        }
+    }
+    
+    // MARK: - IMAGE VIEW FUNCTIONS
+    func setupImageView(height: CGFloat, width: CGFloat, imageString: String?) -> UIImageView {
+        let image = UIImageView()
+        image.sd_setImage(with: URL(string: imageString ?? ""), placeholderImage: UIImage(named: "No_flag.svg"))
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.heightAnchor.constraint(lessThanOrEqualToConstant: height).isActive = true
+        image.widthAnchor.constraint(lessThanOrEqualToConstant: width).isActive = true
+        
+        return image
+    }
+                          
+                          
 }
