@@ -27,14 +27,10 @@ import Foundation
 struct CountryElement: Codable {
     let name: Name?
     let independent: Bool?
-    let status: Status?
     let unMember: Bool?
-    let capital, altSpellings: [String]?
+    let capital: [String]?
     let region: Region?
-    let subregion: String?
-    let languages: [String: String]?
     let area: Double?
-    let maps: Maps?
     let population: Int?
     let continents: [Continent]?
     let coatOfArms, flags: CoatOfArms?
@@ -62,11 +58,6 @@ enum Continent: String, Codable {
     case southAmerica = "South America"
 }
 
-// MARK: - Maps
-struct Maps: Codable {
-    let googleMaps, openStreetMaps: String?
-}
-
 // MARK: - Name
 struct Name: Codable {
     let common, official: String?
@@ -79,10 +70,5 @@ enum Region: String, Codable {
     case asia = "Asia"
     case europe = "Europe"
     case oceania = "Oceania"
-}
-
-enum Status: String, Codable {
-    case officiallyAssigned = "officially-assigned"
-    case userAssigned = "user-assigned"
 }
 
