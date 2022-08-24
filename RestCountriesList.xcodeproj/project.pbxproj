@@ -10,7 +10,6 @@
 		342573B928B4F58C005C24CE /* CountryDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342573B828B4F58C005C24CE /* CountryDetailedViewController.swift */; };
 		342573BB28B514B3005C24CE /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342573BA28B514B3005C24CE /* SwiftUIView.swift */; };
 		342573BE28B56BC5005C24CE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 342573BD28B56BC5005C24CE /* SDWebImage */; };
-		342573C028B64094005C24CE /* ReUsedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342573BF28B64094005C24CE /* ReUsedViews.swift */; };
 		3447335728B4CABB00B96FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447335628B4CABB00B96FBC /* AppDelegate.swift */; };
 		3447335928B4CABB00B96FBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447335828B4CABB00B96FBC /* SceneDelegate.swift */; };
 		3447336028B4CABF00B96FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447335F28B4CABF00B96FBC /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		342573B828B4F58C005C24CE /* CountryDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailedViewController.swift; sourceTree = "<group>"; };
 		342573BA28B514B3005C24CE /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
-		342573BF28B64094005C24CE /* ReUsedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReUsedViews.swift; sourceTree = "<group>"; };
 		3447335328B4CABB00B96FBC /* RestCountriesList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestCountriesList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447335628B4CABB00B96FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3447335828B4CABB00B96FBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				3447337328B4D3C600B96FBC /* NetworkManager.swift */,
-				342573BF28B64094005C24CE /* ReUsedViews.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -202,7 +199,6 @@
 			files = (
 				3447337228B4CE2A00B96FBC /* Country.swift in Sources */,
 				342573BB28B514B3005C24CE /* SwiftUIView.swift in Sources */,
-				342573C028B64094005C24CE /* ReUsedViews.swift in Sources */,
 				3447336E28B4CC8500B96FBC /* CountryTableViewController.swift in Sources */,
 				3447337428B4D3C600B96FBC /* NetworkManager.swift in Sources */,
 				342573B928B4F58C005C24CE /* CountryDetailedViewController.swift in Sources */,
