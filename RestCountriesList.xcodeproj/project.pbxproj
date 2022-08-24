@@ -7,23 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342573B928B4F58C005C24CE /* CountryDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342573B828B4F58C005C24CE /* CountryDetailedViewController.swift */; };
+		342573BB28B514B3005C24CE /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342573BA28B514B3005C24CE /* SwiftUIView.swift */; };
+		342573BE28B56BC5005C24CE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 342573BD28B56BC5005C24CE /* SDWebImage */; };
 		3447335728B4CABB00B96FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447335628B4CABB00B96FBC /* AppDelegate.swift */; };
 		3447335928B4CABB00B96FBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447335828B4CABB00B96FBC /* SceneDelegate.swift */; };
-		3447335B28B4CABB00B96FBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447335A28B4CABB00B96FBC /* ViewController.swift */; };
-		3447335E28B4CABB00B96FBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447335C28B4CABB00B96FBC /* Main.storyboard */; };
 		3447336028B4CABF00B96FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3447335F28B4CABF00B96FBC /* Assets.xcassets */; };
 		3447336328B4CABF00B96FBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3447336128B4CABF00B96FBC /* LaunchScreen.storyboard */; };
+		3447336E28B4CC8500B96FBC /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447336D28B4CC8500B96FBC /* CountryTableViewController.swift */; };
+		3447337228B4CE2A00B96FBC /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447337128B4CE2A00B96FBC /* Country.swift */; };
+		3447337428B4D3C600B96FBC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3447337328B4D3C600B96FBC /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		342573B828B4F58C005C24CE /* CountryDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailedViewController.swift; sourceTree = "<group>"; };
+		342573BA28B514B3005C24CE /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		3447335328B4CABB00B96FBC /* RestCountriesList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestCountriesList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3447335628B4CABB00B96FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3447335828B4CABB00B96FBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3447335A28B4CABB00B96FBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3447335D28B4CABB00B96FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3447335F28B4CABF00B96FBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3447336228B4CABF00B96FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3447336428B4CABF00B96FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3447336D28B4CC8500B96FBC /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
+		3447337128B4CE2A00B96FBC /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		3447337328B4D3C600B96FBC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				342573BE28B56BC5005C24CE /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +64,58 @@
 		3447335528B4CABB00B96FBC /* RestCountriesList */ = {
 			isa = PBXGroup;
 			children = (
-				3447335628B4CABB00B96FBC /* AppDelegate.swift */,
-				3447335828B4CABB00B96FBC /* SceneDelegate.swift */,
-				3447335A28B4CABB00B96FBC /* ViewController.swift */,
-				3447335C28B4CABB00B96FBC /* Main.storyboard */,
+				3447337028B4CE0D00B96FBC /* Helper */,
+				3447336F28B4CE0500B96FBC /* Model */,
+				3447336A28B4CACB00B96FBC /* AppDelegate */,
+				3447336B28B4CAD400B96FBC /* Controller */,
+				3447336C28B4CADC00B96FBC /* View */,
 				3447335F28B4CABF00B96FBC /* Assets.xcassets */,
-				3447336128B4CABF00B96FBC /* LaunchScreen.storyboard */,
 				3447336428B4CABF00B96FBC /* Info.plist */,
 			);
 			path = RestCountriesList;
+			sourceTree = "<group>";
+		};
+		3447336A28B4CACB00B96FBC /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3447335628B4CABB00B96FBC /* AppDelegate.swift */,
+				3447335828B4CABB00B96FBC /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3447336B28B4CAD400B96FBC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3447336D28B4CC8500B96FBC /* CountryTableViewController.swift */,
+				342573B828B4F58C005C24CE /* CountryDetailedViewController.swift */,
+				342573BA28B514B3005C24CE /* SwiftUIView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3447336C28B4CADC00B96FBC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3447336128B4CABF00B96FBC /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3447336F28B4CE0500B96FBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3447337128B4CE2A00B96FBC /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3447337028B4CE0D00B96FBC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3447337328B4D3C600B96FBC /* NetworkManager.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +134,9 @@
 			dependencies = (
 			);
 			name = RestCountriesList;
+			packageProductDependencies = (
+				342573BD28B56BC5005C24CE /* SDWebImage */,
+			);
 			productName = RestCountriesList;
 			productReference = 3447335328B4CABB00B96FBC /* RestCountriesList.app */;
 			productType = "com.apple.product-type.application";
@@ -94,6 +148,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
@@ -111,6 +168,9 @@
 				Base,
 			);
 			mainGroup = 3447334A28B4CABB00B96FBC;
+			packageReferences = (
+				342573BC28B56BC5005C24CE /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 3447335428B4CABB00B96FBC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +187,6 @@
 			files = (
 				3447336328B4CABF00B96FBC /* LaunchScreen.storyboard in Resources */,
 				3447336028B4CABF00B96FBC /* Assets.xcassets in Resources */,
-				3447335E28B4CABB00B96FBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3447335B28B4CABB00B96FBC /* ViewController.swift in Sources */,
+				3447337228B4CE2A00B96FBC /* Country.swift in Sources */,
+				342573BB28B514B3005C24CE /* SwiftUIView.swift in Sources */,
+				3447336E28B4CC8500B96FBC /* CountryTableViewController.swift in Sources */,
+				3447337428B4D3C600B96FBC /* NetworkManager.swift in Sources */,
+				342573B928B4F58C005C24CE /* CountryDetailedViewController.swift in Sources */,
 				3447335728B4CABB00B96FBC /* AppDelegate.swift in Sources */,
 				3447335928B4CABB00B96FBC /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +210,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3447335C28B4CABB00B96FBC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3447335D28B4CABB00B96FBC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3447336128B4CABF00B96FBC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +346,6 @@
 				INFOPLIST_FILE = RestCountriesList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +372,6 @@
 				INFOPLIST_FILE = RestCountriesList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		342573BC28B56BC5005C24CE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		342573BD28B56BC5005C24CE /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 342573BC28B56BC5005C24CE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3447334B28B4CABB00B96FBC /* Project object */;
 }
