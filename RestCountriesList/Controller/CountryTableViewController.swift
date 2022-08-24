@@ -63,8 +63,9 @@ class CountryTableViewController: UITableViewController {
         
         //infoItemTapped
 //        let infoImage = UIImage(systemName: "info.bubble.fill")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-//        let infoButton = UIBarButtonItem(image: infoImage, style: .plain, target: self, action: #selector(infoButtonPressed(_:)))
-        let infoButton = UIBarButtonItem(title: "Info", style: .done, target: self, action: #selector(infoButtonPressed(_:)))
+        let infoButton = UIBarButtonItem(image: UIImage(systemName: "star"), style: .plain, target: self, action: #selector(infoButtonPressed(_:)))
+//        let infoButton = UIBarButtonItem()
+//        let infoButton = UIBarButtonItem(title: "Info", style: .done, target: self, action: #selector(infoButtonPressed(_:)))
         
         self.navigationItem.rightBarButtonItem = infoButton
         navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = .label
@@ -101,7 +102,6 @@ class CountryTableViewController: UITableViewController {
 
         }
     }
-    
 }
 
 extension CountryTableViewController {
